@@ -1,3 +1,7 @@
+# MASShortcut - Non-ARC version
+
+This fork of MASShortcut fixes some issues if you use it with a non-ARC project. If you're using ARC, see the original version at https://github.com/shpakovski/MASShortcut.
+
 # Intro
 
 Some time ago Cocoa developers used a brilliant framework [ShortcutRecorder](http://wafflesoftware.net/shortcut/) for managing keyboard shortcuts in application preferences. However, it became incompatible with a new plugin architecture of Xcode 4.
@@ -10,7 +14,7 @@ I hope, it is really easy:
 
 	// Drop a custom view into XIB and set its class to MASShortcutView
 	@property (nonatomic, weak) IBOutlet MASShortcutView *shortcutView;
-	
+
 	// Think up a preference key to store a global shortcut between launches
 	NSString *const kPreferenceGlobalShortcut = @"GlobalShortcut";
 
@@ -19,7 +23,7 @@ I hope, it is really easy:
 
 	// Execute your block of code automatically when user triggers a shortcut from preferences
 	[MASShortcut registerGlobalShortcutWithUserDefaultsKey:kPreferenceGlobalShortcut handler:^{
-		
+
 		// Let me know if you find a better or more convenient API.
 	}];
 
