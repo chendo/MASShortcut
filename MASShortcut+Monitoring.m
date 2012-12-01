@@ -15,6 +15,7 @@ void UninstallEventHandler();
 @property (nonatomic, readonly) UInt32 carbonHotKeyID;
 
 - (id)initWithShortcut:(MASShortcut *)shortcut handler:(void (^)())handler;
+- (void)uninstallExistingHotKey;
 
 @end
 
