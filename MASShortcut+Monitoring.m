@@ -42,7 +42,7 @@ void UninstallEventHandler();
     [registeredHotKeys removeObjectForKey:monitor];
     if (hotKey)
     {
-        [hotKey uninstallExisitingHotKey];
+        [hotKey uninstallExistingHotKey];
         [hotKey release];
     }
     if (registeredHotKeys.count == 0) {
@@ -78,10 +78,10 @@ void UninstallEventHandler();
 
 - (void)dealloc
 {
-    [self uninstallExisitingHotKey];
+    [self uninstallExistingHotKey];
 }
 
-- (void)uninstallExisitingHotKey
+- (void)uninstallExistingHotKey
 {
     if (_carbonHotKey) {
         UnregisterEventHotKey(_carbonHotKey);
